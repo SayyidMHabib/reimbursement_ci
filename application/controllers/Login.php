@@ -38,14 +38,14 @@ class Login extends CI_Controller
 
 	public function proses()
 	{
-		$this->form_validation->set_rules('username', 'Username', 'required|trim|xss_clean',  array('required' => '%s tidak boleh kosong.'));
+		$this->form_validation->set_rules('nip', 'NIP', 'required|trim|xss_clean',  array('required' => '%s tidak boleh kosong.'));
 		$this->form_validation->set_rules('password', 'Password', 'required|trim|xss_clean', array('required' => '%s tidak boleh kosong.'));
 		$res['status'] = 0;
 		$res['desc'] = "";
 		if ($this->form_validation->run() == FALSE) {
-			$res['desc'] = "Username dan Password harus diisi!";
+			$res['desc'] = "NIP dan Password harus diisi!";
 		} else {
-			$usr = $this->input->post('username');
+			$usr = $this->input->post('nip');
 			$psw = $this->input->post('password');
 			$u = $usr;
 			$p = $psw;
@@ -60,12 +60,13 @@ class Login extends CI_Controller
 					$sess_data['level'] = $qad->log_level;
 					$sess_data['peg_id'] = $qad->log_peg_id;
 					$sess_data['foto'] = $qad->peg_foto;
+					$sess_data['nip'] = $qad->peg_nip;
 					$this->session->set_userdata($sess_data);
 				}
 				$res['status'] = 1;
-				$res['desc'] = "Selamat bekerja {$u}!";
+				$res['desc'] = "Selamat bekerja {$sess_data['username']}!";
 			} else {
-				$res['desc'] = "Username atau Password salah.";
+				$res['desc'] = "NIP atau Password salah.";
 			}
 		}
 		echo json_encode($res);

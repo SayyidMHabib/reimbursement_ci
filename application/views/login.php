@@ -69,8 +69,8 @@
 
               <form id="frm_login" class="mb-3" action="<?= base_url("Login/proses"); ?>" method="POST">
                 <div class="mb-3">
-                  <label for="email" class="form-label">Username</label>
-                  <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username" autofocus required>
+                  <label for="email" class="form-label">NIP</label>
+                  <input type="text" class="form-control" name="nip" id="nip" placeholder="Enter NIP" autofocus required>
                 </div>
                 <div class="mb-3 form-password-toggle">
                   <div class="d-flex justify-content-between">

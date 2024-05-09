@@ -98,11 +98,11 @@ class Model_Login extends CI_Model
 		return $query->row();
 	}
 
-	function cek($username, $password)
+	function cek($nip, $password)
 	{
 		$this->db->from('pgj_login');
 		$this->db->join('pgj_pegawai', 'peg_id = log_peg_id', 'left');
-		$this->db->where("log_user", $username);
+		$this->db->where("peg_nip", $nip);
 		$this->db->where("log_pass", md5($password));
 		return $this->db->get();
 	}
