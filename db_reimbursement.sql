@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 09, 2024 at 06:29 AM
+-- Generation Time: May 10, 2024 at 09:19 AM
 -- Server version: 8.0.30
 -- PHP Version: 7.4.13
 
@@ -66,9 +66,9 @@ CREATE TABLE `pgj_login` (
 
 INSERT INTO `pgj_login` (`log_id`, `log_user`, `log_nama`, `log_pass`, `log_level`, `log_peg_id`) VALUES
 (1, 'admin', 'Admin', '202cb962ac59075b964b07152d234b70', 0, NULL),
-(44, 'doni', 'DONI', '202cb962ac59075b964b07152d234b70', 1, 34),
-(45, 'dono', 'DONO', '202cb962ac59075b964b07152d234b70', 2, 33),
-(46, 'dona', 'DONA', '202cb962ac59075b964b07152d234b70', 3, 32);
+(44, 'doni', 'DONI', 'e10adc3949ba59abbe56e057f20f883e', 1, 34),
+(45, 'dono', 'DONO', 'e10adc3949ba59abbe56e057f20f883e', 2, 33),
+(46, 'dona', 'DONA', 'e10adc3949ba59abbe56e057f20f883e', 3, 32);
 
 -- --------------------------------------------------------
 
